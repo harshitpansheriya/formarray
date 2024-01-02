@@ -36,7 +36,7 @@ export class NavberComponent implements OnInit{
       username:'ravi',
       password:'ravi@123'
     
-  }
+  },
 ]
 
   constructor( fb: FormBuilder){
