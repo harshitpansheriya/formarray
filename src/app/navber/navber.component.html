@@ -1,0 +1,41 @@
+<form [formGroup]="stud" >
+    
+     
+    <div>
+      <h2 class="form">REGISTRATION FORM</h2>
+    </div>
+    <table>
+     
+  <tr>
+    <td>
+      
+      <input type="number"formControlName="number" placeholder="Number">
+  </td>
+
+    <td>
+      <input type="text" formControlName="username" placeholder="username">
+     
+    </td>
+    <td>
+      
+        <input type="password"formControlName="password" placeholder="password">
+    </td>
+
+    <td>
+         
+        <button type="button" (click)=" studentdata() "  class="btn btn-primary">sumbit</button> 
+
+    </td> 
+</tr>
+    <tr *ngFor="let itme of students ">
+      <td>{{itme.number}}</td>
+     <td>{{itme.username}}</td>
+     <td>{{itme.password}}</td>
+
+
+</tr>
+  </table>
+</form>
+
+
+

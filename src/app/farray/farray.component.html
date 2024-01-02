@@ -1,0 +1,14 @@
+
+<button (click)="addEmployee()">ADD</button>
+
+<form [formGroup]="CPOForm">
+  <div formArrayName="otherItem">
+    <div *ngFor="let employee of otherItem().controls ; let empindex = index">
+      <div [formGroupName]="empindex">
+        <span>Phone Number{{empindex +1}}</span>
+        <input type="number" formArrayName="mobile" name="" id="">
+      </div>
+      <button (click)="removeItem(empindex)">remove Item</button>
+    </div>
+  </div>
+</form>
